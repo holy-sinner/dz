@@ -11,7 +11,7 @@ print(f"{n} {m}")
 print(data_1)
 print(data_2)
 print(set(data_1).intersection(set(data_2)))
-
+print(sorted(set(data_1).intersection(set(data_2))))
 
 
 
