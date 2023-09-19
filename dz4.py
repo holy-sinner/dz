@@ -3,14 +3,14 @@
 # Пользователь вводит 2 числа. n — кол-во элементов первого множества. m — кол-во элементов второго множества.
 # Затем пользователь вводит сами элементы множеств.
 
-n = int(input("Введите длину первого списка: "))
-data_1 = [int(input(f"Введите число {i+1}: ")) for i in range(n)]
-m = int(input("Введите длину первого списка: "))
-data_2 = [int(input(f"Введите число {i+1}: ")) for i in range(m)]
-print(f"{n} {m}")
-print(data_1)
-print(data_2)
-print(set(data_1).intersection(set(data_2)))
+# n = int(input("Введите длину первого списка: "))
+# data_1 = [int(input(f"Введите число {i+1}: ")) for i in range(n)]
+# m = int(input("Введите длину первого списка: "))
+# data_2 = [int(input(f"Введите число {i+1}: ")) for i in range(m)]
+# print(f"{n} {m}")
+# print(data_1)
+# print(data_2)
+# print(sorted(set(data_1).intersection(set(data_2))))
 
 
 
@@ -29,9 +29,9 @@ print(set(data_1).intersection(set(data_2)))
 n = int(input("Введите количество кустов: "))
 data = [int(input(f"Введите количество ягод на кусте {i+1}: ")) for i in range(n)]
 
-max = data[0] + data[1]
-for i in range(1,len(data)-1):
-    if data[i] + data[i-1] + data[i+1] > max:
+max = data[0] + data[1] + data[-1]
+for i in range(-2,len(data)-1):
+    if data[i] + data[i] + data[i+1] > max:
         max = data[i] + data[i-1] + data[i+1]
 print(f"{n} -> {data}")
 print(max)
