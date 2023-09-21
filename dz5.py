@@ -18,22 +18,33 @@
 # Задача 32: Определить индексы элементов массива (списка),
 # значения которых принадлежат заданному диапазону (т.е. не меньше заданного минимума и не больше заданного максимума)
 
-# data = [int(i) for i in input("Введите числа:").split() ]
+def do_deap(x,y):
+    res = []
+    if y <= x:
+        for i in range(y,x+1):
+            res.append(i)
+    else:        
+        for i in range(x,y+1):
+            res.append(i)
+    return res
 
-# start = int(input("Введите начало диапазона: "))
-# end = int(input("Введите конец диапазона диапазона: "))
+data = [int(i) for i in input("Введите числа:").split() ]
 
-# diap = []
-# result = []
-# for i in range(start,end+1):
-#     diap.append(i)
+start = int(input("Введите начало диапазона: "))
+end = int(input("Введите конец диапазона диапазона: "))
 
-# for i in range(0,len(data)):
-#     if data[i] in diap:
-#         result.append(i)
+result = []
+
+diap = do_deap(start,end)
+    
+    
+
+for i in range(0,len(data)):
+    if data[i] in diap:
+        result.append(i)
 
 
-# print(result)
+print(result)
 
 
 
